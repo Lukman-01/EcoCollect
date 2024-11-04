@@ -62,12 +62,11 @@ By bridging decentralized technology with real-world environmental efforts, EcoC
    ```
 
 ### Deployed Contract Addresses
-- **Recylox**: `0xacFfd04f690a7D718A23C07276c2bFCcF2Ee7E7A`
-- **Recycle**: `0xD0BFe7253aB8EdCe6Fb46Eba473e13Ee9336aE82`
+- **EcoToken** - 0xacFfd04f690a7D718A23C07276c2bFCcF2Ee7E7A
+- **EcoCollect** - 0xD0BFe7253aB8EdCe6Fb46Eba473e13Ee9336aE82  
 
-You can view the verified contracts on the Base Sepolia Block Explorer:
-- [Recylox Contract](https://base-sepolia.blockscout.com/address/0xacFfd04f690a7D718A23C07276c2bFCcF2Ee7E7A#code)
-- [Recycle Contract](https://base-sepolia.blockscout.com/address/0xD0BFe7253aB8EdCe6Fb46Eba473e13Ee9336aE82#code)
+- **EcoToken**: [0xacFfd04f690a7D718A23C07276c2bFCcF2Ee7E7A](https://base-sepolia.blockscout.com/address/0xacFfd04f690a7D718A23C07276c2bFCcF2Ee7E7A#code)
+- **EcoCollect**: [0xD0BFe7253aB8EdCe6Fb46Eba473e13Ee9336aE82](https://base-sepolia.blockscout.com/address/0xD0BFe7253aB8EdCe6Fb46Eba473e13Ee9336aE82#code)
 
 ## Installation and Running the Frontend
 
