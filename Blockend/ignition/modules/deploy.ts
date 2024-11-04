@@ -4,11 +4,11 @@ const ContractsModule = buildModule("EcoCollectModule", (m) => {
 
   const name = "EcoToken";
   const symbol = "ETK";
-  const initialSupply = 1000;
+  const initialSupply = 1000000;
 
-  const token = m.contract("Recylox", [name, symbol, initialSupply]);
+  const token = m.contract("EcoToken", [name, symbol, initialSupply]);
 
-  const contractAddr = m.contract("Recycle", [token]);
+  const contractAddr = m.contract("EcoCollect", [token]);
 
 
 

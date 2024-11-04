@@ -1,18 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// Import the interface for the ERC20 token standard.
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
-// Import the Ownable contract, which provides basic authorization control.
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "./IERC20.sol";
 
 /**
- * @title Recylox
- * @dev Implementation of the Recylox ERC20 token contract.
+ * @title EcoToken
+ * @dev Implementation of the EcoToken ERC20 token contract.
  * It extends the ERC20 standard token contract from the OpenZeppelin library.
  */
-contract Recylox is IERC20, Ownable (msg.sender){
+contract EcoToken {
+    address owner;
     string public name; // The name of the token
     string public symbol; // The symbol of the token
     uint8 public constant decimals = 18; // The number of decimals for token display
@@ -20,6 +17,11 @@ contract Recylox is IERC20, Ownable (msg.sender){
 
     mapping(address => uint256) public balanceOf; // Mapping to track the balanceOf of token holders
     mapping(address => mapping(address => uint256)) public allowance; // Mapping to track the allowances granted by token holders
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "EcoToken: only the contract owner can call this function");
+        _;
+    }
 
     /**
      * @dev Constructor function.
@@ -31,14 +33,14 @@ contract Recylox is IERC20, Ownable (msg.sender){
         string memory _symbol,
         uint256 initialSupply
     ) {
-        require(initialSupply > 0, "Recylox: initial supply cannot be zero");
+        require(initialSupply > 0, "EcoToken: initial supply cannot be zero");
 
         name = _name;
         symbol = _symbol;
         totalSupply = initialSupply * (10 ** decimals);
         balanceOf[msg.sender] = totalSupply;
 
-        emit Transfer(address(0), msg.sender, totalSupply);
+        //emit Transfer(address(0), msg.sender, totalSupply);
     }
 
     /**
@@ -91,12 +93,12 @@ contract Recylox is IERC20, Ownable (msg.sender){
      * @param amount The amount of tokens to mint.
      */
     function mint(address account, uint256 amount) public onlyOwner {
-        require(account != address(0), "Recylox: mint to the zero address");
+        require(account != address(0), "EcoToken: mint to the zero address");
 
         totalSupply += amount;
         balanceOf[account] += amount;
 
-        emit Transfer(address(0), account, amount);
+        //emit Transfer(address(0), account, amount);
     }
 
     /**
@@ -121,20 +123,20 @@ contract Recylox is IERC20, Ownable (msg.sender){
     ) internal {
         require(
             sender != address(0),
-            "Recylox: transfer from the zero address"
+            "EcoToken: transfer from the zero address"
         );
         require(
             recipient != address(0),
-            "Recylox: transfer to the zero address"
+            "EcoToken: transfer to the zero address"
         );
         require(
             balanceOf[sender] >= amount,
-            "Recylox: transfer amount exceeds balance"
+            "EcoToken: transfer amount exceeds balance"
         );
 
         balanceOf[sender] -= amount;
         balanceOf[recipient] += amount;
-        emit Transfer(sender, recipient, amount);
+        //emit Transfer(sender, recipient, amount);
     }
 
     /**
@@ -150,12 +152,12 @@ contract Recylox is IERC20, Ownable (msg.sender){
     ) internal {
         require(
             tokenOwner != address(0),
-            "Recylox: approve from the zero address"
+            "EcoToken: approve from the zero address"
         );
-        require(spender != address(0), "Recylox: approve to the zero address");
+        require(spender != address(0), "EcoToken: approve to the zero address");
 
         allowance[tokenOwner][spender] = amount;
-        emit Approval(tokenOwner, spender, amount);
+        //emit Approval(tokenOwner, spender, amount);
     }
 
     /**
@@ -164,14 +166,14 @@ contract Recylox is IERC20, Ownable (msg.sender){
      * @param amount The amount of tokens to burn.
      */
     function _burn(address account, uint256 amount) internal {
-        require(account != address(0), "Recylox: burn from the zero address");
+        require(account != address(0), "EcoToken: burn from the zero address");
         require(
             balanceOf[account] >= amount,
-            "Recylox: burn amount exceeds balance"
+            "EcoToken: burn amount exceeds balance"
         );
 
         balanceOf[account] -= amount;
         totalSupply -= amount;
-        emit Transfer(account, address(0), amount);
+        //emit Transfer(account, address(0), amount);
     }
 }
