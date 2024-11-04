@@ -76,38 +76,9 @@ const Header = () => {
                 className={`w-fit hover:border-b hover:border-primary40 
                   hover:font-bold transition-all flex flex-row gap-2 my-4 
                   border-primary40 md:mr-4 ${pathname == "/" ? "border-b font-bold" : "font-normal"}`}
-                  onMouseEnter={homeDropdown}
-                  onMouseLeave={homeDropdown}
+                
                 >
-                <Link to="/">Home</Link> <img src={dropdown} alt="dropdown icon" />
-                {
-                showHomeDropDown ?
-                <div className=" inline-block">
-                  <div className="w-[13rem] absolute bg-white shadow-light border border-[#ddd] p-4">
-                    <Link 
-                      to={'/about-us'}
-                      className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/about-us" ? "border-b font-bold" : "font-normal"}`}
-                     >About Us
-                    </Link>
-                    <Link 
-                      to={'/blog'}
-                      className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/blog" ? "border-b font-bold" : "font-normal"}`}
-                      >Blog
-                      </Link>
-                      <Link 
-                      to={'/how-it-works'}
-                      className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/how-it-works" ? "border-b font-bold" : "font-normal"}`}
-                     >How It Works
-                    </Link>
-                    {/* <Link 
-                      to={'/privacy-policy'}
-                      className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/privacy-policy" ? "border-b font-bold" : "font-normal"}`}
-                      >Privacy Policy
-                      </Link> */}
-                  </div>
-                </div>
-                : ""
-              }
+                <Link to="/">Home</Link>
               
               </li>
 

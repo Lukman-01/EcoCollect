@@ -57,39 +57,45 @@ const Empowering = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center">
-      <h2 className="p-8 text-5xl text-primary40 font-bold text-center">
-        Empowering Change through Recycling:
+    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-16">
+      <h2 className="p-8 text-4xl md:text-5xl text-primary40 font-bold text-center">
+        Empowering Change through Recycling
       </h2>
+      
       <div
-        className="w-4/5 bg-cover"
+        className="w-4/5 bg-cover bg-no-repeat py-8"
         style={{
           backgroundImage: `url(${EmpoweringImageBg})`,
-          backgroundSize: "50%",
+          backgroundSize: "contain",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
         }}
       >
         {data.map((item, index) => (
-          <div key={index} className="flex flex-wrap ml-4 p-4 md:ml-0 md:p-0">
-            <div className="w-full md:w-1/5 flex items-start justify-end mt-4">
-              <div className="bg-green-900 flex items-center py-4 px-8 min-w-64">
-                <img src={item.vector} alt="Vector" className="h-8 w-8 mr-4" />
+          <div
+            key={index}
+            className="flex flex-wrap ml-4 p-4 md:ml-0 md:p-0 mb-12"
+          >
+            {/* Vector Image and Title */}
+            <div className="w-full md:w-1/5 flex flex-col items-center md:items-end justify-start mt-4">
+              <div className="flex items-center bg-green-900 py-6 px-10 rounded-lg shadow-md">
+                <img src={item.vector} alt="Vector" className="h-10 w-10 mr-4" />
                 <div className="text-2xl text-white">{item.topic}</div>
               </div>
               <img
                 src={Polygon_about}
                 alt="polygonAboutUs"
-                className="h-8 w-8 -ml-2 mt-5"
+                className="h-8 w-8 -mt-4"
               />
             </div>
 
-            <ul className="bg-blue-200 w-1 hidden md:flex flex-col items-center ml-4 mr-8">
-              <li className="w-6 h-6 rounded-full bg-primary40 m-10"></li>
+            {/* Separator Line */}
+            <ul className="hidden md:flex flex-col items-center justify-center ml-4 mr-8">
+              <li className="w-2 h-2 rounded-full bg-primary40 m-6"></li>
             </ul>
 
-            <div className="mt-8 ml-4 flex flex-col justify-between w-full md:w-3/5">
-              <div className="text-2xl">{item.content}</div>
+            {/* Content Section */}
+            <div className="mt-6 ml-4 flex flex-col justify-between w-full md:w-3/5">
+              <p className="text-lg md:text-xl leading-relaxed">{item.content}</p>
             </div>
           </div>
         ))}

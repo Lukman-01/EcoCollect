@@ -12,23 +12,17 @@ import { WagmiProviders } from './providers/wagmi.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <WagmiProviders>
-<RecycloxTokenProvider>
-    <RecycleContractProvider>
-    
-
-      <React.StrictMode>
-   
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-     
-      </React.StrictMode>
-
-  
-    </RecycleContractProvider>
+    <RecycloxTokenProvider>
+      <RecycleContractProvider>
+        <React.StrictMode>
+      
+          <BrowserRouter>
+              <App />
+          </BrowserRouter>
+        
+        </React.StrictMode>
+      </RecycleContractProvider>
     </RecycloxTokenProvider>
-
-
   </WagmiProviders>
 )
 
