@@ -2,23 +2,14 @@ import { Route, Routes } from 'react-router-dom';
 
 import companyWhiteIcon from '../../assets/companyWhite.svg'
 import companyGreenIcon from '../../assets/companyGreen.svg'
-import chatWhiteIcon from '../../assets/chatWhite.svg'
-import chatGreenIcon from '../../assets/chatGreen.svg'
-import offersWhiteIcon from '../../assets/offersWhite.svg'
-import offersGreenIcon from '../../assets/offersGreen.svg'
 import notificationWhiteIcon from "../../assets/notificationWhite.svg";
 import notificationGreenIcon from "../../assets/notificationGreen.svg";
-import historyWhiteIcon from '../../assets/historyWhite.svg'
-import historyGreenIcon from '../../assets/historyGreen.svg'
 import dashboardWhiteIcon from '../../assets/dashboardWhite.svg'
 import dashboardGreenIcon from '../../assets/dashboardGreen.svg'
 
 import AdminDashboard from '../../pages/admin_dashboard/AdminDashboard';
-import HistoryPage from "../../pages/admin_dashboard/HistoryPage.jsx";
-import OffersPage from "../../pages/admin_dashboard/OffersPage.jsx";
 import Notifications from '../../pages/admin_dashboard/Notifications';
 import Companies from '../../pages/admin_dashboard/Companies';
-import ChatPage from '../../pages/admin_dashboard/ChatPage';
 
 const routes = [
     {

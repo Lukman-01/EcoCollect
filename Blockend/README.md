@@ -61,9 +61,9 @@ npx hardhat verify --network base-sepolia <deployed address>
 
 ### Deployed Addresses
 
-**EcoToken** - 0x467310A2B65DD01423c55F0430A915Ca757B1820  
-**EcoCollect** - 0x83663Fc80d39f55d147013d62ae416C0B507B791  
+**EcoToken** - 0xCA2b7e76eAdAD48348d5f164d98C56BD9472457C 
+**EcoCollect** - 0xC03814F91a4Ae88A5f5d18F005e72A8D55218b75  
 
-- **EcoToken**: [0x467310A2B65DD01423c55F0430A915Ca757B1820](https://base-sepolia.blockscout.com/address/0x467310A2B65DD01423c55F0430A915Ca757B1820#code)
-- **EcoCollect**: [0x83663Fc80d39f55d147013d62ae416C0B507B791](https://base-sepolia.blockscout.com/address/0x83663Fc80d39f55d147013d62ae416C0B507B791#code)
+- **EcoToken**: [0xCA2b7e76eAdAD48348d5f164d98C56BD9472457C](https://base-sepolia.blockscout.com/address/0xCA2b7e76eAdAD48348d5f164d98C56BD9472457C#code)
+- **EcoCollect**: [0xC03814F91a4Ae88A5f5d18F005e72A8D55218b75](https://base-sepolia.blockscout.com/address/0xC03814F91a4Ae88A5f5d18F005e72A8D55218b75#code)
 

@@ -141,7 +141,7 @@ const AdminDashboardLayout = ({dashboard_content, active_link}) => {
       <div className=" w-[90%] md:w-[500px] mx-auto p-4 mt-32 border-[#ddd] border shadow-light font-montserrat">
           <h1 className="text-red-700 text-center font-[700] text-2rem my-8 p-4 ">Unauthorized access!</h1>
           <p className="text-center text-primary40 mb-12 py-4">
-            Only Recylox admin are allowed access to this page.
+            Only EcoCollect admin are allowed access to this page.
           </p>
       </div>
     </div>

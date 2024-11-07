@@ -104,16 +104,6 @@ const Header = () => {
                     className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/blog" ? "border-b font-bold" : "font-normal"}`}
                     >Blog
                     </Link>
-                    <Link 
-                    to={'/how-it-works'}
-                    className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/how-it-works" ? "border-b font-bold" : "font-normal"}`}
-                   >How It Works
-                  </Link>
-                  {/* <Link 
-                    to={'/privacy-policy'}
-                    className={`w-fit hover:border-b hover:border-primary40 hover:font-bold transition-all flex flex-row gap-2 my-4 border-primary40 md:mr-4 ${pathname == "/privacy-policy" ? "border-b font-bold" : "font-normal"}`}
-                    >Privacy Policy
-                    </Link> */}
                 </div>
                 </div>
                 : ""
