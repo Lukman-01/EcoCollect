@@ -58,12 +58,3 @@ After deployment, verify your contracts on the Base Sepolia block explorer with:
 ```bash
 npx hardhat verify --network base-sepolia <deployed address>
 ```
-
-### Deployed Addresses
-
-**EcoToken** - 0xCA2b7e76eAdAD48348d5f164d98C56BD9472457C 
-**EcoCollect** - 0xC03814F91a4Ae88A5f5d18F005e72A8D55218b75  
-
-- **EcoToken**: [0xCA2b7e76eAdAD48348d5f164d98C56BD9472457C](https://base-sepolia.blockscout.com/address/0xCA2b7e76eAdAD48348d5f164d98C56BD9472457C#code)
-- **EcoCollect**: [0xC03814F91a4Ae88A5f5d18F005e72A8D55218b75](https://base-sepolia.blockscout.com/address/0xC03814F91a4Ae88A5f5d18F005e72A8D55218b75#code)
-
