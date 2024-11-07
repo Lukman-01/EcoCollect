@@ -12,12 +12,8 @@ const Hero = () => {
               <h2 className=" text-3xl md:text-[45px] font-[800] md:leading-[90px] tracking-[1px]">
                 ECOCOLLECT
               </h2>
-              <h2 className=" text-4xl md:text-[60px] tracking-[1px] font-black text-[#006D44]">
-                SOLID WASTE MANAGEMENT
-              </h2>
               <p className="w-[275px] font-bold text-base md:text-[20px] tracking-[-0.5px] leading-[25px] mt-6">
-                Turn Trash into Treasure: Recycle, Earn Rewards, and Save the
-                Planet
+                Recycle, Earn Rewards, and Save the Planet
               </p>
               <MediumButton text={"Learn more"} linkto={"/about-us"} />
             </div>
